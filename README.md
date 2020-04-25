@@ -17,5 +17,4 @@ Below describes the data source and steps to create web viewer using following s
 - Used [Mapbox Web-gl-js](https://docs.mapbox.com/mapbox-gl-js/api/)to assemble web map
 - Used [Mapbox gl-inspect](https://www.npmjs.com/package/mapbox-gl-inspect) tool to identify clickable selected individual parcel
 - Used [Mapbox gl-geocode](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/)  
-
-One can use [bl.ocks.org](https://bl.ocks.org/-/about) tool to test web map and deploy 
+- One can use [bl.ocks.org](https://bl.ocks.org/-/about) tool to test web map and deploy 
