@@ -1,6 +1,4 @@
-# WaParcelViewer Work Flow
-
-Summary Diagram of workflow - to be added later
+## Summary Diagram of workflow - to be added later
 WA Parcel Viewer.jpg
 
 ## WA state parcel web viewer using WA state geo opendata portal
