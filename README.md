@@ -4,7 +4,7 @@ Summary Diagram of workflow - to be added later
 WA Parcel Viewer.jpg
 
 ## WA state parcel web viewer using WA state geo opendata portal
-## This project will describe the data source and steps creating web viewer using following techonlogy
+Below describes the data source and steps to create web viewer using following stack of open source technology.
   ### Data Collect
   - WA State Open Data Portal as data source [WA Parcel and Legal Boundaries](http://geo.wa.gov/datasets/wadnr::wa-parcel-and-legal-boundaries)
 ### Data Convert 
