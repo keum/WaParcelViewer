@@ -19,8 +19,8 @@ Below describes the data source and steps to create web viewer using following s
 - Used [Mapbox gl-geocode](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/)  
 - One can use [bl.ocks.org](https://bl.ocks.org/-/about) tool to test web map and deploy 
 
-# Bright.json 
+### Bright.json 
 This is a file was that exported from Maputnik after it's been stylized.
 
-# index.html 
+### index.html 
 This is a web file that includes API to display the parcel data and web functionality. 
