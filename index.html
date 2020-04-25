@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Washington State Parcel Viewer</title>
+    <!--
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='/dist/mapbox-gl-inspect.js'></script>
+    <link href='/dist/mapbox-gl-inspect.css' rel='stylesheet' />
+    -->
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+<script src='https://github.com/lukasmartinelli/mapbox-gl-inspect/releases/download/v1.3.1/mapbox-gl-inspect.js'></script>
+<link href='https://github.com/lukasmartinelli/mapbox-gl-inspect/releases/download/v1.3.1/mapbox-gl-inspect.css' rel='stylesheet' />
+
+
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link
+rel="stylesheet"
+href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+type="text/css"
+/>
+
+<div id='map'></div>
+
+<!-- Script below showing only certain feature and popup  -->
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoibWFwaXRwayIsImEiOiJjazllaHAzYjgwMDM0M21uem9qY2NudzNtIn0.FGITEeuI60wXgnKJq0HOkg';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'bright.json',
+    center: [-121.20, 47.31],
+    zoom: 6,
+    hash: true
+});
+
+map.addControl(
+  new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+      })
+);
+
+map.addControl(new mapboxgl.NavigationControl());
+
+//only popup on click and showing WA-Parcels-fill layer
+
+map.addControl(new MapboxInspect({
+  showMapPopup: true,
+  showMapPopupOnHover: false,
+  showInspectButton: false,
+  showInspectMapPopupOnHover: false,
+  queryParameters: {
+    layers: ['waparcel-fill']
+  }
+}));
+
+
+
+
+
+</script>
+
+</body>
+</html>
